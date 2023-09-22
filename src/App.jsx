@@ -1,27 +1,29 @@
 
 import './App.css'
-import HookForm from './components/HookForm/HookForm'
-import RefForm from './components/RefForm/RefForm'
-import ReusableForm from './components/ReusableForm/ReusableForm'
-import SimpleForm from './components/SimpleForm/SimpleForm'
-import StatefulForm from './components/StatefulForm/StatefulForm'
+import Grandpa from './components/Grandpa/Grandpa'
+// import HookForm from './components/HookForm/HookForm'
+// import RefForm from './components/RefForm/RefForm'
+// import ReusableForm from './components/ReusableForm/ReusableForm'
+// import SimpleForm from './components/SimpleForm/SimpleForm'
+// import StatefulForm from './components/StatefulForm/StatefulForm'
 
 function App() {
-  const handleSignUpSubmit = e =>{
-    e.preventDefault();
-   }
+  // const handleSignUpSubmit = e =>{
+  //   e.preventDefault();
+  //  }
 
 
   return (
     <>
 
-      <h1>Vite + React</h1>
+      <h1>Form Master</h1>
+      <Grandpa></Grandpa>
       
       {/* <SimpleForm></SimpleForm> */}
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}>
+      {/* <ReusableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit}>
         <div>
           <h2>sign up</h2>
           <p>please sign up right now</p>
@@ -32,7 +34,7 @@ function App() {
           <h2>Update Profile</h2>
           <p>always keep updated</p>
         </div>
-      </ReusableForm>
+      </ReusableForm> */}
     </>
   )
 }
