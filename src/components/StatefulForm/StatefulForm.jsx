@@ -2,12 +2,13 @@ import { useState } from "react";
 
 
 const StatefulForm = () => {
+    const {name,setName} = useState(null);
      const {email,setEmail} = useState(null);
      const {password,setPassword} = useState(null)
     const handleSubmit = e =>
     { 
         e.preventDefault();
-        console.log(email,password);
+        console.log(email,password,name);
 
     }
     const changeEmail = e =>
@@ -21,10 +22,17 @@ const StatefulForm = () => {
         console.log(e.target.value);
         setPassword(e.target.value);
     }
+    const handleNameChange = e =>
+    {
+        console.log(e.target.value);
+        setName(e.target.value);
+    }
     return (
         <div>
              <form onSubmit={handleSubmit}>
-                <input type="text" name="name" />
+                <input 
+                onChange={handleNameChange}
+                type="text" name="name" />
                 <br />
                 <input 
                 onChange={changeEmail}
